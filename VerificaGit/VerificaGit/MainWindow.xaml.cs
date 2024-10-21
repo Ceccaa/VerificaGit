@@ -19,20 +19,23 @@ namespace VerificaGit
         public MainWindow()
         {
             InitializeComponent();
-            Biblioteca biblioteca = new Biblioteca("Malatesta", "Cesena", "10:00", "18:00");
+            
         }
+
+        //Statica causa tempo consegna
+        Biblioteca biblioteca = new Biblioteca("Malatesta", "Cesena", "10:00", "18:00");
 
 
         private void CreaLibro_Click(object sender, RoutedEventArgs e)
         {
             
-            Libro libro = new Libro(Titolo.Text, Autore.Text, Pubblicazione.Text, Editore.Text, Pagine.Text);
-            AddLibro(libro);
+            Libro libro = new Libro(Titolo.Text, Autore.Text, Pubblicazione.Text, Editore.Text, int.Parse(Pagine.Text));
+            biblioteca.AddLibro(libro);
         }
 
         private void VerificaTitolo_Click(object sender, RoutedEventArgs e)
         {
-            if (FindByTitle(Titolo.Text))
+            if (biblioteca.FindByTitle(Titolo.Text))
             {
                 Result.Text = "Presente";
             }
@@ -44,12 +47,12 @@ namespace VerificaGit
 
         private void RicercaAutore_Click(object sender, RoutedEventArgs e)
         {
-            Result_Copia.Text = FindByAuthor(Autore.Text);
+            Result_Copia.Text = biblioteca.FindByAuthor(Autore.Text);
         }
 
         private void VerificaLibri_Click(object sender, RoutedEventArgs e)
         {
-            Reult_Copia1.Text = Count().ToString();
+            Result_Copia1.Text = biblioteca.Count().ToString();
         }
     }
 }

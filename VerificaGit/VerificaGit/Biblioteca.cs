@@ -11,34 +11,32 @@ namespace VerificaGit
         List<Libro> listaLibri = new List<Libro>();
 
 
-        public Biblioteca (string _nome, string _indirizzo, string _apertura, string _chiusura, List<Libro> _listaLibri)
+        public Biblioteca (string _nome, string _indirizzo, string _apertura, string _chiusura)
         {
             this.nome = _nome;
             this.indirizzo = _indirizzo;
             this.apertura = _apertura;
             this.chiusura = _chiusura;
-            this.listaLibri = _listaLibri;
         }
 
         public string Nome { get; set; }
         public string Indirizzo { get; set; }
         public string Apertura { get; set; }
         public string Chiusura { get; set; }
-        public List<Libro> ListaLibri { get; set; }
 
         public void AddLibro(Libro libro)
         {
             listaLibri.Add(libro);
         }
 
-        public int FindByTitle(string titolo)
+        public bool FindByTitle(string titolo)
         {
             for (int i = 0; i < listaLibri.Count; i++)
             {
-                if(titolo == listaLibri[i].Titolo) return i;
+                if(titolo == listaLibri[i].Titolo) return true;
             }
 
-            return -1;
+            return false;
         }
 
         public string FindByAuthor(string autore)
