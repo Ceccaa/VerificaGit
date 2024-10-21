@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TextBox x:Name="Titolo" HorizontalAlignment="Left" Margin="76,78,0,0" TextWrapping="Wrap" Text="Titolo" VerticalAlignment="Top" Width="120" TextChanged="TextBox_Titolo"/>
+        <TextBox x:Name="Autore" HorizontalAlignment="Left" Margin="76,101,0,0" TextWrapping="Wrap" Text="Autore" VerticalAlignment="Top" Width="120" TextChanged="TextBox_Autore"/>
+        <TextBox x:Name="Pubblicazione" HorizontalAlignment="Left" Margin="76,124,0,0" TextWrapping="Wrap" Text="Anno pubblicazione" VerticalAlignment="Top" Width="120" TextChanged="TextBox_Pubblicazione"/>
+        <TextBox x:Name="Editore" HorizontalAlignment="Left" Margin="76,147,0,0" TextWrapping="Wrap" Text="Editore" VerticalAlignment="Top" Width="120" TextChanged="TextBox_Editore"/>
+        <TextBox x:Name="Pagine" HorizontalAlignment="Left" Margin="76,170,0,0" TextWrapping="Wrap" Text="Numero pagine" VerticalAlignment="Top" Width="120" TextChanged="TextBox_Pagine"/>
+        <Button x:Name="CreaLibro" Content="Aggiungi Libro" HorizontalAlignment="Left" Margin="76,217,0,0" VerticalAlignment="Top" Width="120" Click="CreaLibro_Click"/>
+        <Button x:Name="VerificaTitolo" Content="Verifica Titolo" HorizontalAlignment="Left" Margin="76,267,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="VerificaTitolo_Click"/>
+        <TextBox x:Name="Result" HorizontalAlignment="Left" Margin="218,267,0,0" TextWrapping="Wrap" Text="Result" VerticalAlignment="Top" Width="71" Height="23" IsReadOnly="True" TextChanged="Result_TextChanged"/>
+        <Button x:Name="RicercaAutore" Content="Ricerca Autore" HorizontalAlignment="Left" Margin="568,73,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="RicercaAutore_Click"/>
+        <TextBox x:Name="Result_Copia" HorizontalAlignment="Left" Margin="568,121,0,0" TextWrapping="Wrap" Text="Result" VerticalAlignment="Top" Width="120" Height="23" IsReadOnly="True" TextChanged="Result_TextChanged"/>
+        <Button x:Name="VerificaLibri" Content="Verifica Libri" HorizontalAlignment="Left" Margin="568,219,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="VerificaLibri_Click"/>
+        <TextBox x:Name="Result_Copia1" HorizontalAlignment="Left" Margin="568,267,0,0" TextWrapping="Wrap" Text="Result" VerticalAlignment="Top" Width="120" Height="23" IsReadOnly="True" TextChanged="Result_TextChanged"/>
+
+
 
     </Grid>
 </Window>
