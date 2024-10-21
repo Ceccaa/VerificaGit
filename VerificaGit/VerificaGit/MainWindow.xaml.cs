@@ -19,7 +19,7 @@ namespace VerificaGit
         public MainWindow()
         {
             InitializeComponent();
-            Biblioteca biblioteca = new Biblioteca("malatesta", "Cesena", "10:00", "18:00");
+            Biblioteca biblioteca = new Biblioteca("Malatesta", "Cesena", "10:00", "18:00");
         }
 
 
