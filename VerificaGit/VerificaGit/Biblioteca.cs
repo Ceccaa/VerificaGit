@@ -24,7 +24,7 @@ namespace VerificaGit
         public string Indirizzo { get; set; }
         public string Apertura { get; set; }
         public string Chiusura { get; set; }
-        public List<Libro> ListaLibri { get; private set; }
+        public List<Libro> ListaLibri { get; set; }
 
         public void AddLibro(Libro libro)
         {
